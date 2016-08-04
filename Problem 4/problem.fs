@@ -9,8 +9,8 @@ let ispalindrome str =
 
 
 let numbers = seq {
-    for x in 100 .. 999 - 1 do
-        for y in 100 .. 999 - 1 do
+    for x in 100 .. 999 do
+        for y in 100 .. 999 do
             if ispalindrome (x*y) then
                 yield (x*y)
                   } |> Seq.max |> printfn "%A"
