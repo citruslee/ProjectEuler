@@ -11,5 +11,6 @@ let ispalindrome str =
 let numbers = seq {
     for x in 100 .. 999 - 1 do
         for y in 100 .. 999 - 1 do
-           yield (x*y)
-                  } |> Seq.filter(fun x -> ispalindrome x = true) |> Seq.max |> printfn "%A"
+            if ispalindrome (x*y) then
+                yield (x*y)
+                  } |> Seq.max |> printfn "%A"
